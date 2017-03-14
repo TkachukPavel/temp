@@ -41,7 +41,7 @@ public class MainFrame extends JFrame {
             setSize(screenSize.width / 2, screenSize.height / 2);
             setLocationByPlatform(true);
             setLayout(new BorderLayout());
-            Scanner input = new Scanner(new File("data.txt"));
+            Scanner input = new Scanner(new File("1data.txt"));
             add(new DiagramPanel(parseInput(input)));
         }
         catch (NoSuchElementException e){
@@ -56,14 +56,14 @@ public class MainFrame extends JFrame {
 
     }
 
-    public static void main(String args[]) throws FileNotFoundException {
+    public static void main(String args[]) {
         try {
             MainFrame mainFrame = new MainFrame();
             mainFrame.setTitle("Demo");
             mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             mainFrame.setVisible(true);
         }catch (Exception e){
-            e.printStackTrace();
+           // e.printStackTrace();
         }
     }
 }

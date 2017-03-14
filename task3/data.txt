@@ -1,5 +1,6 @@
-5
-Two 100
-wo 200
-Three 50
-Five 50
+6
+a 1
+b 1
+c 2
+d 3
+e 5

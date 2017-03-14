@@ -17,9 +17,9 @@ public class AnimationPanel extends JPanel{
     private int radius = 100;
 
     @Override
-    public void paint(Graphics graphics) {
+    public void paintComponent(Graphics graphics) {
         Graphics2D g2d = (Graphics2D) graphics;
-        super.paint(graphics);
+        super.paintComponent(graphics);
         Rectangle bounds = graphics.getClipBounds();
         int centerX = bounds.width / 2;
         int centerY = bounds.height / 2;
@@ -35,8 +35,6 @@ public class AnimationPanel extends JPanel{
         Timer timer = new Timer(40, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-//                Rectangle bounds = getBounds();
-//                r = Math.min(bounds.height, bounds.width) / 2;
                 double w = velocity / (double) (radius);
                 double period = 2*Math.PI / w;
                 angle += w * 0.04;

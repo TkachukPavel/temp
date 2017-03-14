@@ -22,7 +22,7 @@ public class MainFrame extends JFrame{
         BufferedImage img = ImageIO.read(new File("flag.png"));
         AnimationPanel animationPanel = new AnimationPanel(50, img, Math.min(screenSize.width, screenSize.height) / 2);
         add(animationPanel, BorderLayout.CENTER);
-        JSlider sliderVelocity = new JSlider(JSlider.HORIZONTAL, 0, 100, 10);
+        JSlider sliderVelocity = new JSlider(JSlider.HORIZONTAL, 0, 1000, 10);
         sliderVelocity.setValue(50);
         sliderVelocity.addChangeListener(new ChangeListener() {
             @Override
